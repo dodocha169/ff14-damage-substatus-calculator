@@ -1,0 +1,19 @@
+{
+  "name": "ff14-damage-substatus-calculator",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dodocha169/ff14-damage-substatus-calculator.git"
+  },
+  "author": "dodocha169",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/dodocha169/ff14-damage-substatus-calculator/issues"
+  },
+  "homepage": "https://github.com/dodocha169/ff14-damage-substatus-calculator#readme"
+}
