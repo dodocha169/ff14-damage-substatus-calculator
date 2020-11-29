@@ -1,9 +1,10 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react';
-import App from './App';
+import {calculateDirectHit} from './DirectHit';
 
-test('renders learn react link', () => {
-  render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
+
+
+test('ダイレクトヒットの数値による発動率', () => {
+  expect(0.02).toBe(calculateDirectHit(380, 120));
+  expect(0.03).toBe(calculateDirectHit(380, 180));
 });
