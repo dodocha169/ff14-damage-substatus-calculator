@@ -1,26 +1,28 @@
-import React from 'react';
+import React, {useState} from 'react';
 import logo from './logo.svg';
 import './App.css';
+import { Label, Input } from '@rebass/forms'
+import { Box, Heading, Button } from 'rebass'
+import {calculateDirectHit} from './DirectHit';
 
-function App() {
+
+const App: React.FC =() => {
+    const [ directHit, setDirectHit ] = useState<number>(0)
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          aiueo
-        
-        </a>
-      </header>
-    </div>
+    <Box>
+    <Label>DirectHit</Label>
+    <Input
+        id='directHit'
+        placeholder='380'
+        onChange= {(input) => {
+            const value = input.target.value
+            const num = Number(value)
+            setDirectHit(num)
+        }}
+    />
+    <Label>{calculateDirectHit(380,directHit)*100}%</Label>
+    </Box>    
+
   );
 }
 
